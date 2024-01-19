@@ -28,7 +28,8 @@ function Option(
   owner,
   checked,
   disabled,
-  allVotesSubmitted
+  allVotesSubmitted,
+  dasher
 ) {
   return (
     <Card
@@ -98,6 +99,7 @@ function Options({
   seed,
   allowedToVote,
   allVotesSubmitted,
+  dasher
 }) {
   if (definition === undefined || guesses == undefined) return;
   const trueDefinitionVoters = Object.keys(guesses).filter((user) =>
@@ -142,7 +144,8 @@ function Options({
             entry.owner,
             checked,
             !allowedToVote || entry.owner == cookieCutter.get("username"),
-            allVotesSubmitted
+            allVotesSubmitted,
+            dasher
           );
         })}
       </Chip.Group>
@@ -268,6 +271,7 @@ function VotingScreen(
         seed={seed}
         allowedToVote={allowedToVote}
         allVotesSubmitted={allVotesSubmitted}
+        dasher={dasher}
       />
       <Group
         mt="md"
@@ -277,7 +281,7 @@ function VotingScreen(
         style={{ maxWidth: CARD_WIDTH }}
       >
         <Text size="xs" italic>
-          After submitting a vote, you will see the author of each definition.
+          After submitting a vote, you will see the author of each answer.
           When everyone submits their votes, you will see who voted for each
           answer. After reviewing the results, the dasher will then be able to
           proceed to the next stage where you will get to see the scoreboard.
