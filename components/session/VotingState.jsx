@@ -72,7 +72,7 @@ function Option(
           value={owner}
           style={{ textAlign: "center" }}
           >
-            Answer {index + 1}: {definition.split(' ')[0]} {len(definition.split(' ')) > 1 ? [1] : ""} ...
+           Answer {index + 1}: {definition.split(' ')[0]} {definition.split(' ').length > 1 ? [1] : ""} ...
           </Chip>
         )}
         {dasher === cookieCutter.get("username") && (
@@ -90,7 +90,7 @@ function Option(
           value={owner}
           style={{ textAlign: "center" }}
           >
-            Answer {index + 1}: {definition.split(' ')[0]} {len(definition.split(' ')) > 1 ? [1] : ""} ...
+            Answer {index + 1}: {definition.split(' ')[0]} {definition.split(' ').length > 1 ? [1] : ""} ...
           </Chip>
         )}
         </Grid.Col>
