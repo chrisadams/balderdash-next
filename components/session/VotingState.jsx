@@ -72,8 +72,15 @@ function Option(
           value={owner}
           style={{ textAlign: "center" }}
           >
-            Answer {index + 1}: {definition.split(' ')[0]} ...
+            Answer {index + 1}: {definition.split(' ')[0]} {len(definition.split(' ')) > 1 ? [1] : ""} ...
           </Chip>
+        )}
+        {dasher === cookieCutter.get("username") && (
+          <Grid.Col span={12}>
+          <Text mt="xs" mb="lg" italic>
+            {definition}
+          </Text>
+          </Grid.Col>
         )}
         {dasher === cookieCutter.get("username") && (
           <Chip
@@ -83,7 +90,7 @@ function Option(
           value={owner}
           style={{ textAlign: "center" }}
           >
-            Answer {index + 1}: {definition}
+            Answer {index + 1}: {definition.split(' ')[0]} {len(definition.split(' ')) > 1 ? [1] : ""} ...
           </Chip>
         )}
         </Grid.Col>
