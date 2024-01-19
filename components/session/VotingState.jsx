@@ -28,7 +28,8 @@ function Option(
   owner,
   checked,
   disabled,
-  allVotesSubmitted
+  allVotesSubmitted,
+  dasher
 ) {
   return (
     <Card
@@ -62,22 +63,37 @@ function Option(
           </Text>
           </Grid.Col> */}
         <Grid.Col span={12}>
+
+        {cookieCutter.get("username") != dasher && (
           <Chip
-            variant="filled"
-            checked={checked}
-            disabled={disabled}
-            value={owner}
-            style={{ textAlign: "center" }}
+          variant="filled"
+          checked={checked}
+          disabled={disabled}
+          value={owner}
+          style={{ textAlign: "center" }}
           >
-            Answer {index + 1}: {definition.split(' ')[0]} ...
+           Answer {index + 1}: {definition.split(' ')[0]} {definition.split(' ').length > 1 ? [1] : ""} ...
           </Chip>
-        </Grid.Col>
-        {allVotesSubmitted && voters.length > 0 && (
-          <Grid.Col span={12} pt="xs">
-            <Text size="xs">Received votes from:</Text>
-            <Text size="xs">{voters.join(", ")}</Text>
+        )}
+        {dasher === cookieCutter.get("username") && (
+          <Grid.Col span={12}>
+          <Text mt="xs" mb="lg" italic>
+            {definition}
+          </Text>
           </Grid.Col>
         )}
+        {dasher === cookieCutter.get("username") && (
+          <Chip
+          variant="filled"
+          checked={checked}
+          disabled={disabled}
+          value={owner}
+          style={{ textAlign: "center" }}
+          >
+            Answer {index + 1}: {definition.split(' ')[0]} {definition.split(' ').length > 1 ? [1] : ""} ...
+          </Chip>
+        )}
+        </Grid.Col>
       </Grid>
     </Card>
   );
@@ -90,6 +106,7 @@ function Options({
   seed,
   allowedToVote,
   allVotesSubmitted,
+  dasher
 }) {
   if (definition === undefined || guesses == undefined) return;
   const trueDefinitionVoters = Object.keys(guesses).filter((user) =>
@@ -134,7 +151,8 @@ function Options({
             entry.owner,
             checked,
             !allowedToVote || entry.owner == cookieCutter.get("username"),
-            allVotesSubmitted
+            allVotesSubmitted,
+            dasher
           );
         })}
       </Chip.Group>
@@ -260,6 +278,7 @@ function VotingScreen(
         seed={seed}
         allowedToVote={allowedToVote}
         allVotesSubmitted={allVotesSubmitted}
+        dasher={dasher}
       />
       <Group
         mt="md"
@@ -269,7 +288,7 @@ function VotingScreen(
         style={{ maxWidth: CARD_WIDTH }}
       >
         <Text size="xs" italic>
-          After submitting a vote, you will see the author of each definition.
+          After submitting a vote, you will see the author of each answer.
           When everyone submits their votes, you will see who voted for each
           answer. After reviewing the results, the dasher will then be able to
           proceed to the next stage where you will get to see the scoreboard.
