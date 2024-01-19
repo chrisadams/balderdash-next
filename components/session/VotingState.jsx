@@ -62,22 +62,30 @@ function Option(
           </Text>
           </Grid.Col> */}
         <Grid.Col span={12}>
+
+        {cookieCutter.get("username") != dasher && (
           <Chip
-            variant="filled"
-            checked={checked}
-            disabled={disabled}
-            value={owner}
-            style={{ textAlign: "center" }}
+          variant="filled"
+          checked={checked}
+          disabled={disabled}
+          value={owner}
+          style={{ textAlign: "center" }}
           >
             Answer {index + 1}: {definition.split(' ')[0]} ...
           </Chip>
-        </Grid.Col>
-        {allVotesSubmitted && voters.length > 0 && (
-          <Grid.Col span={12} pt="xs">
-            <Text size="xs">Received votes from:</Text>
-            <Text size="xs">{voters.join(", ")}</Text>
-          </Grid.Col>
         )}
+        {dasher === cookieCutter.get("username") && (
+          <Chip
+          variant="filled"
+          checked={checked}
+          disabled={disabled}
+          value={owner}
+          style={{ textAlign: "center" }}
+          >
+            Answer {index + 1}: {definition}
+          </Chip>
+        )}
+        </Grid.Col>
       </Grid>
     </Card>
   );
