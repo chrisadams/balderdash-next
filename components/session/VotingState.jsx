@@ -56,11 +56,11 @@ function Option(
             {owner == cookieCutter.get("username") && " (You)"}
           </Text>
         </Grid.Col>
-        <Grid.Col span={12}>
+        {/* <Grid.Col span={12}>
           <Text mt="xs" mb="lg" italic>
             {definition}
           </Text>
-        </Grid.Col>
+          </Grid.Col> */}
         <Grid.Col span={12}>
           <Chip
             variant="filled"
@@ -69,7 +69,7 @@ function Option(
             value={owner}
             style={{ textAlign: "center" }}
           >
-            Answer {index + 1}
+            Answer {index + 1}: {definition.split(' ')[0]} ...
           </Chip>
         </Grid.Col>
         {allVotesSubmitted && voters.length > 0 && (
@@ -238,7 +238,7 @@ function VotingScreen(
         {word}
       </Title>
       <Title size="h5" mb="md">
-        Pick the true definition
+        Pick the real answer
       </Title>
       <Text
         ml="auto"
@@ -249,9 +249,9 @@ function VotingScreen(
         italic
         style={{ maxWidth: CARD_WIDTH }}
       >
-        Note: the dasher and those who have submitted the correct definition are
-        note allowed to vote, the rest are not allowed to vote for their own
-        definitions.
+        Note: the dasher and those who have submitted the correct answer are
+        not allowed to vote. You cannot vote for your own
+        answer.
       </Text>
       <Options
         guesses={guesses}
@@ -317,8 +317,8 @@ function VotingScreen(
       >
         {guessedCorrectly && (
           <Text size="sm" weight={1000} color="red.4">
-            You have guessed the definition correctly! This means you can not
-            vote for other definitions. Please wait for their others to submit
+            You have guessed the answer correctly! This means you can not
+            vote for other answers. Please wait for their others to submit
             their votes and for the dasher to move us to the next stage
           </Text>
         )}
