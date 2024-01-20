@@ -41,19 +41,18 @@ function Option(
     >
       <Grid grow>
         <Grid.Col span={6}>
-          {allVotesSubmitted && (
+          {/*{allVotesSubmitted && (
             <Text size="xs" color="dimmed" align="left">
               Votes: {voters.length}
             </Text>
-          )}
+          )}*/}
         </Grid.Col>
         <Grid.Col span={6}>
           <Text
             size="xs"
-            color={owner == TRUE_DEFINITION ? "red.8" : "dimmed"}
+            color="dimmed"
             align="right"
           >
-            {disabled && owner}
             {owner == cookieCutter.get("username") && " (You)"}
           </Text>
         </Grid.Col>
