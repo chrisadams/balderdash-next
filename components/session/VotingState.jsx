@@ -29,7 +29,8 @@ function Option(
   checked,
   disabled,
   allVotesSubmitted,
-  dasher
+  dasher,
+  word
 ) {
   return (
     <Card
@@ -77,7 +78,7 @@ function Option(
         {dasher === cookieCutter.get("username") && (
           <Grid.Col span={12}>
           <Text mt="xs" mb="lg" italic>
-          Answer {index + 1}: {definition}
+          Answer {index + 1}: {word}: {definition}
           </Text>
           </Grid.Col>
         )}
@@ -105,7 +106,8 @@ function Options({
   seed,
   allowedToVote,
   allVotesSubmitted,
-  dasher
+  dasher,
+  word
 }) {
   if (definition === undefined || guesses == undefined) return;
   const trueDefinitionVoters = Object.keys(guesses).filter((user) =>
@@ -151,7 +153,8 @@ function Options({
             checked,
             !allowedToVote || entry.owner == cookieCutter.get("username"),
             allVotesSubmitted,
-            dasher
+            dasher,
+            word
           );
         })}
       </Chip.Group>
@@ -280,6 +283,7 @@ function VotingScreen(
         allowedToVote={allowedToVote}
         allVotesSubmitted={allVotesSubmitted}
         dasher={dasher}
+        word={word}
       />
       <Group
         mt="md"
