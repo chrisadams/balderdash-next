@@ -71,7 +71,7 @@ function Option(
           value={owner}
           style={{ textAlign: "center" }}
           >
-           Answer {index + 1}: {definition.split(' ')[0]} {definition.split(' ').length > 1 ? [1] : ""} ...
+           Answer {index + 1}: {definition.split(' ')[0]} {definition.split(' ').length > 1 ? definition.split(' ')[1] : ""} ...
           </Chip>
         )}
         {dasher === cookieCutter.get("username") && (
@@ -89,7 +89,7 @@ function Option(
           value={owner}
           style={{ textAlign: "center" }}
           >
-            Answer {index + 1}: {definition.split(' ')[0]} {definition.split(' ').length > 1 ? [1] : ""} ...
+            Answer {index + 1}: {definition.split(' ')[0]} {definition.split(' ').length > 1 ? definition.split(' ')[1] : ""} ...
           </Chip>
         )}
         </Grid.Col>
@@ -255,7 +255,9 @@ function VotingScreen(
         {word}
       </Title>
       <Title size="h5" mb="md">
-        Pick the real answer
+        Dasher read the real answers,
+        then answerers will select their guess one at a time as we go around the circle.
+        State your pick then enter it on the app.
       </Title>
       <Text
         ml="auto"
@@ -287,9 +289,7 @@ function VotingScreen(
         style={{ maxWidth: CARD_WIDTH }}
       >
         <Text size="xs" italic>
-          After submitting a vote, you will see the author of each answer.
-          When everyone submits their votes, you will see who voted for each
-          answer. After reviewing the results, the dasher will then be able to
+          When everyone submits their votes, the dasher will then be able to
           proceed to the next stage where you will get to see the scoreboard.
         </Text>
         {cookieCutter.get("username") != dasher && !guessedCorrectly && (
