@@ -124,9 +124,9 @@ function GuessCard({ guesses }) {
           padding: "5px",
         }}
       >
-        <Text size="xs" align="left" color="dimmed" pb="xs">
+        {/*<Text size="xs" align="left" color="dimmed" pb="xs">
           {user}
-        </Text>
+      </Text>*/}
         <Text color={waiting ? "dimmed" : "white"} italic>
           {waiting ? "Waiting for answer..." : guess}
         </Text>
