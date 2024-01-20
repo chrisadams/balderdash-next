@@ -71,17 +71,17 @@ function Option(
           value={owner}
           style={{ textAlign: "center" }}
           >
-           Answer {index + 1}: {definition.split(' ')[0]} {definition.split(' ').length > 1 ? definition.split(' ')[1] : ""} ...
+           Answer {index + 1}: {definition.split(' ')[0]} {definition.split(' ').length > 1 ? definition.split(' ')[1] : ""} {definition.split(' ').length > 2 ? definition.split(' ')[2] : ""} {definition.split(' ').length > 5 ? definition.split(' ')[3] : ""} ...
           </Chip>
         )}
         {dasher === cookieCutter.get("username") && (
           <Grid.Col span={12}>
           <Text mt="xs" mb="lg" italic>
-            {definition}
+          Answer {index + 1}: {definition}
           </Text>
           </Grid.Col>
         )}
-        {dasher === cookieCutter.get("username") && (
+        {/*{dasher === cookieCutter.get("username") && (
           <Chip
           variant="filled"
           checked={checked}
@@ -91,7 +91,7 @@ function Option(
           >
             Answer {index + 1}: {definition.split(' ')[0]} {definition.split(' ').length > 1 ? definition.split(' ')[1] : ""} ...
           </Chip>
-        )}
+        )}*/}
         </Grid.Col>
       </Grid>
     </Card>
