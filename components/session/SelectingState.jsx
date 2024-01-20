@@ -47,7 +47,7 @@ function GuesserCaption() {
         maxWidth: "350px",
       }}
     >
-      The dasher is picking a word. Only the dasher can see the definition.
+      The dasher is picking a prompt. Only the dasher can see the real answer.
     </Text>
   );
 }
