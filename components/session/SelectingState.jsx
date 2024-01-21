@@ -27,8 +27,8 @@ function DasherCaption() {
         maxWidth: "350px",
       }}
     >
-      Pick a prompt that you think your friends will have a hard time guessing,
-      but that isn't so unlike what they may write that it'll stand out.
+      Pick a prompt whose answer you think your friends will have a hard time guessing,
+      that isn't so unlike what they may write that it'll stand out.
       Everyone can see the prompt, but only you can see the true answer and only
       you can either confirm it or pick a different prompt. Remember: if no one
       guesses the correct answer (either by voting or writing it), then you,
