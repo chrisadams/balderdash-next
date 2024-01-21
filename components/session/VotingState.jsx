@@ -258,9 +258,9 @@ function VotingScreen(
         {word}
       </Title>
       <Title size="h5" mb="md">
-        Dasher read the real answers,
-        then answerers will select their guess one at a time as we go around the circle.
-        State your pick then enter it on the app.
+        Dasher read all the answers, then we'll go around the circle
+        and one at a time, answer out loud what we think the correct answer was
+        and enter that choice on the app.
       </Title>
       <Text
         ml="auto"
