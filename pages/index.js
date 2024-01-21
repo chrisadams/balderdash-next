@@ -42,8 +42,8 @@ export default function Home() {
         >
           <Text size="md">
             Balderdash is a bluffing game where you need to either guess the
-            definition of an obscure word or come up with a convincing
-            definition of one. This game is ideal for a group of 4-8 people!
+            true answer to a prompt or come up with a convincing
+            one.
           </Text>
         </Paper>
         <SessionModal
