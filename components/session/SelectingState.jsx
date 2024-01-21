@@ -105,7 +105,7 @@ export default function SelectingState({
       <br />
       <Card shadow="lg" radius="md" withBorder style={cardStyle} mb="md">
         <Title size="h3" color="dimmed" mb="md">
-          Sampled Word
+          Prompt
         </Title>
         <Title size="h4" color="red.5" weight={800} transform="uppercase">
           {word}
