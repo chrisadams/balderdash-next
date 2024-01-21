@@ -79,7 +79,7 @@ function GuesserView(sessionId, word, guesses, roundNumber) {
   const guess = guesses[cookieCutter.get("username")].guess;
   return (
     <div style={{ paddingLeft: "10px", paddingRight: "10px" }}>
-      <Title size="h2">Define the following word</Title>
+      <Title size="h2">Answer the following prompt</Title>
       <Title color="red.8" pt="xl" pb="xl" transform="uppercase">
         {word}
       </Title>
