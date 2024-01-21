@@ -27,10 +27,11 @@ function DasherCaption() {
         maxWidth: "350px",
       }}
     >
-      Pick a word that you think your friends will have a hard time guessing.
-      Everyone can see the word, but only you can see the definition and only
-      you can either confirm it or pick a different word. Remember: if no one
-      guesses the correct definition (either by voting or writing it), then you,
+      Pick a prompt that you think your friends will have a hard time guessing,
+      but that isn't so unlike what they may write that it'll stand out.
+      Everyone can see the prompt, but only you can see the true answer and only
+      you can either confirm it or pick a different prompt. Remember: if no one
+      guesses the correct answer (either by voting or writing it), then you,
       the dasher will score points!
     </Text>
   );
@@ -69,7 +70,7 @@ function DasherControls({ sessionId, roundNumber }) {
           updateRoundState(sessionId, roundNumber, ROUND_STATES.GUESSING)
         }
       >
-        Confirm Word
+        Confirm prompt
       </Button>
     </Group>
   );
@@ -78,7 +79,7 @@ function DasherControls({ sessionId, roundNumber }) {
 function GuesserWaitScreen() {
   return (
     <Text size="xs" italic>
-      Waiting for the dasher to either confirm or reject the word...
+      Waiting for the dasher to either confirm or reject the prompt...
     </Text>
   );
 }
@@ -100,7 +101,7 @@ export default function SelectingState({
   }, [word]);
   return (
     <>
-      <Title size="h2">Word Selection</Title>
+      <Title size="h2">Prompt Selection</Title>
       {isDasher ? <DasherCaption /> : <GuesserCaption />}
       <br />
       <Card shadow="lg" radius="md" withBorder style={cardStyle} mb="md">
