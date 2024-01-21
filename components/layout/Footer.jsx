@@ -83,15 +83,7 @@ export default function Footer() {
           variant="default"
           radius="xl"
         >
-          <Link href="https://github.com/ivan-rivera/balderdash-next" passHref>
-            <a style={{ color: "unset !important" }}>
-              <IconBrandGithub />
-            </a>
-          </Link>
         </ActionIcon>
-        <Text pt="sm" size="xs" color="dimmed">
-          Version 1.0.11
-        </Text>
       </footer>
     </>
   );
