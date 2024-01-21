@@ -92,7 +92,7 @@ function GuesserView(sessionId, word, guesses, roundNumber) {
       <Title size="h3">Example ingredients list: chuck roast, dry onion soup mix, dry brown gravy mix, apple juice</Title>
       <Title size="h3">Example fact: The atmosphere is composed of primarily nitrogen</Title>
       <Title size="h3">Example quote: The superhighway of celebrity and showmanship is filled with debris</Title>
-      <Title size="h3">Example idiom translation: it's better to be wrong than to be late</Title>
+      <Title size="h3">Example idiom translation: it is better to be wrong than to be late</Title>
       <Title size="h3">Example definition: sawdust and other material used as industrial filler</Title>
       <Title size="h3">Example hook for movie: When a deadly zombie virus infects a school in Germany it remains on the student Leo to save the world</Title>
     </div>
