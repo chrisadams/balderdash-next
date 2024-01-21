@@ -14,7 +14,10 @@ export default function AboutModal(props) {
         >
             <p>
                 This app was built by a lone and not very talented developer :)
+
+                ^ Not anymore, I cloned the repo and edited it. -Chris
                 <br/><br/>
+
                 My one and only goal behind this project was to be able to play this game with my friends.
                 <br/><br/>
                 If you have any suggestions or feedback, please feel free to create an issue
