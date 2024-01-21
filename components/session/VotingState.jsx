@@ -258,7 +258,7 @@ function VotingScreen(
         {word}
       </Title>
       <Title size="h5" mb="md">
-        Dasher read all the answers, then we'll go around the circle
+        Dasher read all the answers, then we will go around the circle
         and one at a time, answer out loud what we think the correct answer was
         and enter that choice on the app.
       </Title>
