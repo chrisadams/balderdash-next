@@ -5,8 +5,8 @@ export default function CreateUsernameInput(props) {
         <TextInput
             mt="xl"
             id="create-session-username"
-            label="Choose your username"
-            placeholder="Username"
+            label="Enter your name"
+            placeholder="Name"
             {...props.form.getInputProps('username')}
         />
     )
